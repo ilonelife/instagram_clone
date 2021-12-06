@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instaclone/model/avatar_icon.dart';
 
-class AvatarIcon extends StatelessWidget {
-  final String image;
-  final Icon iconN;
-  final String name;
+class AvatarWidget extends StatelessWidget {
+  final AvatarIcon avatarIcon;
 
-  AvatarIcon({Key key, this.image, this.iconN, this.name}) : super(key: key);
+  const AvatarWidget({Key key, this.avatarIcon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,30 +15,40 @@ class AvatarIcon extends StatelessWidget {
         Stack(
           children: [
             SizedBox(
-              width: 60,
-              height: 60,
+              width: 55,
+              height: 55,
               child: CircleAvatar(
                 radius: 30,
-                backgroundImage: NetworkImage(image),
+                backgroundImage: NetworkImage(avatarIcon.imgUrl),
               ),
             ),
-            Container(
-                width: 60,
-                height: 60,
-                alignment: Alignment.bottomRight,
-                child: SizedBox(
-                  width: 25,
-                  height: 25,
-                  child: FloatingActionButton(
-                    onPressed: null,
-                    child: iconN,
-                  ),
-                )),
+            // Image.network(
+            //   avatarIcon.imgUrl,
+            //   width: 55,
+            //   height: 55,
+            //   fit: BoxFit.cover,
+            //
+            // ),
+            if (avatarIcon.owner)
+              Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Icon(
+                    Icons.add_circle_outlined,
+                    color: Colors.blue,
+                  )),
+            if (avatarIcon.live)
+              Positioned(
+                  bottom: 0,
+                  child: Icon(
+                    Icons.voicemail_outlined,
+                    color: Colors.red,
+                  )),
           ],
         ),
         Text(
-          name,
-          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          avatarIcon.name,
+          style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
         ),
       ],
     );
