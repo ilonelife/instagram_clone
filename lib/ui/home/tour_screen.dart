@@ -7,7 +7,7 @@ class TourScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Activity Tour'),
+        title: Text('Guide'),
         backgroundColor: Colors.blueGrey,
         actions: <Widget>[
           IconButton(
@@ -17,7 +17,7 @@ class TourScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text('Tour'),
+          Text('Guide'),
         ],
       ),
     );

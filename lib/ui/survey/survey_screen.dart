@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AccountScreen extends StatelessWidget {
-  const AccountScreen({Key key}) : super(key: key);
+class SurveyScreen extends StatelessWidget {
+  const SurveyScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Account'),
+        title: Text('Survey'),
         backgroundColor: Colors.indigoAccent,
         actions: <Widget>[
           IconButton(
@@ -17,7 +17,7 @@ class AccountScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text('Account'),
+          Text('Survey'),
         ],
       ),
     );
