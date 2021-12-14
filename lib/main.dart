@@ -4,15 +4,16 @@ import 'package:instaclone/avatar_icon.dart';
 import 'package:instaclone/data/insta_data.dart';
 import 'package:instaclone/model/avatar_icon.dart';
 import 'package:instaclone/ui/login/login_screen.dart';
+import 'package:instaclone/ui/weather/loading.dart';
 
 import 'avatar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -22,13 +23,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+    //  home: Loading(),
       home: LoginScreen(),
     );
   }
 }
 
 class InstaScreen extends StatefulWidget {
-  const InstaScreen({Key key}) : super(key: key);
+  const InstaScreen({Key? key}) : super(key: key);
 
   @override
   _InstaScreenState createState() => _InstaScreenState();
@@ -232,7 +234,7 @@ class _InstaScreenState extends State<InstaScreen> {
 
 class _buildAvatar extends StatelessWidget {
   const _buildAvatar({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

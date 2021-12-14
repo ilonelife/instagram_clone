@@ -4,5 +4,5 @@ class TourWeatherCard {
   final String weatherInfo;
   final String recommend;
 
-  TourWeatherCard({this.imgUrl, this.title, this.weatherInfo, this.recommend});
+  TourWeatherCard({required this.imgUrl, required this.title, required this.weatherInfo, required this.recommend});
 }

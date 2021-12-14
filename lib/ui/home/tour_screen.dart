@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TourScreen extends StatelessWidget {
-  const TourScreen({Key key}) : super(key: key);
+  const TourScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

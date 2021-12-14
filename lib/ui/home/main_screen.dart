@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instaclone/ui/guide/guide_screen.dart';
 import 'package:instaclone/ui/home/account_screen.dart';
 import 'package:instaclone/ui/home/home_screen.dart';
 import 'package:instaclone/ui/home/tour_screen.dart';
@@ -6,7 +7,7 @@ import 'package:instaclone/ui/login/login_screen.dart';
 import 'package:instaclone/ui/survey/survey_screen.dart';
 
 class MainScreen extends StatefulWidget {
-  MainScreen({Key key}) : super(key: key);
+  MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -15,7 +16,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final _screens = [
     HomeScreen(),
-    TourScreen(),
+    GuideScreen(),
     SurveyScreen(),
     // AccountScreen(),
   ];

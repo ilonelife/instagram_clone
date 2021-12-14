@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class SurveyScreen extends StatelessWidget {
-  const SurveyScreen({Key? key}) : super(key: key);
+class GuideScreen extends StatelessWidget {
+  const GuideScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Survey'),
-        backgroundColor: Colors.indigoAccent,
+        title: Text('Guide'),
+        backgroundColor: Colors.blueGrey,
         actions: <Widget>[
           IconButton(
               onPressed: () { },
@@ -16,8 +16,8 @@ class SurveyScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('투어 참여 설문'),
-      ),
+        child: Text('투어 지역 가이드'),
+      )
     );
   }
 }

@@ -4,5 +4,5 @@ class AvatarIcon {
   final bool owner;
   final bool live;
 
-  AvatarIcon({this.name, this.imgUrl, this.owner, this.live});
+  AvatarIcon({required this.name, required this.imgUrl, required this.owner, required this.live});
 }

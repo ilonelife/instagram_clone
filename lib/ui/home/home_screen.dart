@@ -7,7 +7,7 @@ import 'package:instaclone/ui/home/home_tour_course.dart';
 import 'package:instaclone/ui/login/login_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   final PageController controller = PageController(initialPage: 0);
 
@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
    */
   Widget _buildTourWeather(PageController controller) {
     return SizedBox(
-      height: 350,
+      height: 400,
       child: PageView(
         scrollDirection: Axis.horizontal,
         controller: controller,
@@ -101,7 +101,7 @@ class HomeScreen extends StatelessWidget {
 *  화면 제일 상단에 위
  */
 class _buildWeatherDashboard extends StatelessWidget {
-  const _buildWeatherDashboard({Key key}) : super(key: key);
+  const _buildWeatherDashboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +116,7 @@ class _buildWeatherDashboard extends StatelessWidget {
   액티비티 활동을 카테고리 표시하는 아이
  */
 class _buildCategory extends StatelessWidget {
-  const _buildCategory({Key key}) : super(key: key);
+  const _buildCategory({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

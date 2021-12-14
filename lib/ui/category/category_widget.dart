@@ -5,7 +5,7 @@ import 'package:instaclone/model/category_icon.dart';
 class CategoryWidget extends StatelessWidget {
   final CategoryIcon categoryIcon;
 
-  const CategoryWidget({Key key, this.categoryIcon}) : super(key: key);
+  const CategoryWidget({Key? key, required this.categoryIcon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -5,7 +5,7 @@ import 'package:instaclone/model/avatar_icon.dart';
 class AvatarWidget extends StatelessWidget {
   final AvatarIcon avatarIcon;
 
-  const AvatarWidget({Key key, this.avatarIcon}) : super(key: key);
+  const AvatarWidget({Key? key, required this.avatarIcon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -3,5 +3,5 @@ class CategoryIcon {
   final String categoryImage;
   final String categoryPage;
 
-  CategoryIcon({this.categoryName, this.categoryImage, this.categoryPage});
+  CategoryIcon({required this.categoryName, required this.categoryImage, required this.categoryPage});
 }

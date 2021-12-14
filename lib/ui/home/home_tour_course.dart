@@ -4,7 +4,7 @@ import 'package:instaclone/model/tour_weather_card.dart';
 class HomeTourCourse extends StatelessWidget {
   final TourWeatherCard tourWeatherCard;
 
-  const HomeTourCourse({Key key, this.tourWeatherCard}) : super(key: key);
+  const HomeTourCourse({Key? key, required this.tourWeatherCard}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
