@@ -32,7 +32,7 @@ class AvatarWidget extends StatelessWidget {
               //
               // ),
               if (avatarIcon.owner)
-                Positioned(
+                const Positioned(
                     right: 0,
                     bottom: 0,
                     child: Icon(
@@ -40,7 +40,7 @@ class AvatarWidget extends StatelessWidget {
                       color: Colors.blue,
                     )),
               if (avatarIcon.live)
-                Positioned(
+                const Positioned(
                     bottom: 0,
                     child: Icon(
                       Icons.voicemail_outlined,

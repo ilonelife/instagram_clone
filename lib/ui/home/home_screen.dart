@@ -31,19 +31,19 @@ class HomeScreen extends StatelessWidget {
         children: [
           _buildWeatherDashboard(),
           _buildCategory(),
-          Divider(
+          const Divider(
             thickness: 1,
             color: Colors.blueGrey,
           ),
           _buildWeatherTitle(),
           _buildTourWeather(controller),
-          Divider(
+          const Divider(
             thickness: 1,
             color: Colors.blueGrey,
           ),
-          Card(
-
-          ),
+          // Card(
+          //
+          // ),
         ],
       ),
     );
@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       '투어 날씨 정보',
                       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

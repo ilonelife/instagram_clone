@@ -7,15 +7,15 @@ class SurveyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Survey'),
+        title: const Text('Survey'),
         backgroundColor: Colors.indigoAccent,
         actions: <Widget>[
           IconButton(
               onPressed: () { },
-              icon: Icon(Icons.logout_outlined)),
+              icon: const Icon(Icons.logout_outlined)),
         ],
       ),
-      body: Center(
+      body: const Center(
         child: Text('투어 참여 설문'),
       ),
     );

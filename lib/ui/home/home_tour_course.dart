@@ -22,7 +22,7 @@ class HomeTourCourse extends StatelessWidget {
             ),
             Text(tourWeatherCard.title),
             Text(tourWeatherCard.weatherInfo),
-            Divider(),
+            const Divider(),
             Text(tourWeatherCard.recommend),
           ],
         ),

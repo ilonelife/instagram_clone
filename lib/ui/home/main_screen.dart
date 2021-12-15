@@ -16,10 +16,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final _screens = [
     HomeScreen(),
-    GuideScreen(),
-    SurveyScreen(),
-    // AccountScreen(),
-  ];
+    const GuideScreen(),
+    const SurveyScreen(),
+    const AccountScreen(),
+   ];
 
   int _index = 0;
 
@@ -28,6 +28,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _screens[_index],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _index,
         onTap: (int index) {
           setState(() {
@@ -41,8 +42,8 @@ class _MainScreenState extends State<MainScreen> {
               icon: Icon(Icons.location_on_outlined), label: 'Guide'),
           BottomNavigationBarItem(
               icon: Icon(Icons.poll_outlined), label: 'Survey'),
-          // BottomNavigationBarItem(
-          //     icon: Icon(Icons.person_outlined), label: 'Account'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_outlined), label: 'Account'),
         ],
       ),
     );

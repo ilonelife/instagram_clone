@@ -7,16 +7,16 @@ class TourScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Guide'),
+        title: const Text('Guide'),
         backgroundColor: Colors.blueGrey,
         actions: <Widget>[
           IconButton(
               onPressed: () { },
-              icon: Icon(Icons.logout_outlined)),
+              icon: const Icon(Icons.logout_outlined)),
         ],
       ),
       body: Column(
-        children: [
+        children: const [
           Text('Guide'),
         ],
       ),

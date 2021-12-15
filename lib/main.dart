@@ -9,7 +9,7 @@ import 'package:instaclone/ui/weather/loading.dart';
 import 'avatar.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-    //  home: Loading(),
-      home: LoginScreen(),
+     // home: Loading(),
+      home: const LoginScreen(),
     );
   }
 }
@@ -47,7 +47,7 @@ class _InstaScreenState extends State<InstaScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Instagram',
             style: TextStyle(
               color: Colors.black,
@@ -58,17 +58,17 @@ class _InstaScreenState extends State<InstaScreen> {
           actions: <Widget>[
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.add_box_outlined),
+              icon: const Icon(Icons.add_box_outlined),
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.favorite_border_outlined),
+              icon: const Icon(Icons.favorite_border_outlined),
               color: Colors.black,
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.send_outlined),
+              icon: const Icon(Icons.send_outlined),
               color: Colors.black,
             ),
           ],
@@ -104,8 +104,8 @@ class _InstaScreenState extends State<InstaScreen> {
   ListView _buildListView() {
     return ListView(
       children: [
-        _buildAvatar(), // 아바타 아이콘
-        Divider(
+        const _buildAvatar(), // 아바타 아이콘
+        const Divider(
           thickness: 1,
           color: Colors.grey,
         ),
@@ -113,12 +113,12 @@ class _InstaScreenState extends State<InstaScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 20,
                 backgroundImage: NetworkImage(
                     'https://cdn.pixabay.com/photo/2016/12/06/17/11/fushimi-inari-shrine-1886975_1280.jpg'),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               Expanded(
@@ -126,7 +126,7 @@ class _InstaScreenState extends State<InstaScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       'Arneo Paris',
                       style:
@@ -139,23 +139,23 @@ class _InstaScreenState extends State<InstaScreen> {
                   ],
                 ),
               ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.more_horiz)),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.more_horiz)),
             ],
           ),
         ),
-        Container(
+        SizedBox(
           height: 200,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              Container(
+              SizedBox(
                 width: 360.0,
                 height: 200.0,
                 child: Image.network(
                   imgList[0],
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 360.0,
                 height: 200.0,
                 child: Image.network(
@@ -174,14 +174,14 @@ class _InstaScreenState extends State<InstaScreen> {
         ),
         Row(
           children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.favorite)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.message)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.send)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.message)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.send)),
             Container(
               width: 50,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Icon(
                     Icons.circle,
                     color: Colors.blue,
@@ -205,10 +205,10 @@ class _InstaScreenState extends State<InstaScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 100,
             ),
-            IconButton(onPressed: () {}, icon: Icon(Icons.bookmark)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.bookmark)),
           ],
         ),
         Padding(
@@ -216,13 +216,11 @@ class _InstaScreenState extends State<InstaScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Text(
-                  'Aime par Gabdu et dautres personens \n I know there is shape property for Card Widget and it takes ShapeBorder class.',
-                  style: TextStyle(fontSize: 12),
-                  textAlign: TextAlign.left,
-                ),
+            children: const [
+              Text(
+                'Aime par Gabdu et dautres personens \n I know there is shape property for Card Widget and it takes ShapeBorder class.',
+                style: TextStyle(fontSize: 12),
+                textAlign: TextAlign.left,
               ),
             ],
           ),

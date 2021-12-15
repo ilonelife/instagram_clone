@@ -15,13 +15,26 @@ class _LoadingState extends State<Loading> {
     // TODO: implement initState
     super.initState();
     getLocation();
+   // getPosition();
+
   }
 
-  void getLocation() async {
+  Future<void> getLocation() async {
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
+    print('test');
     print(position.longitude);
+
   }
+
+  // Future<void> getPosition() async {
+  //   var currentPosition = await Geolocator()
+  //       .getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+  //   var lastPosition = await Geolocator()
+  //       .getLastKnownPosition(desiredAccuracy: LocationAccuracy.low);
+  //   print(currentPosition);
+  //   print(lastPosition);
+  // }
 
   @override
   Widget build(BuildContext context) {

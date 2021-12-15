@@ -26,7 +26,7 @@ class Avatar extends StatelessWidget {
         ),
         Text(
           name,
-          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
         ),
       ],
     );
